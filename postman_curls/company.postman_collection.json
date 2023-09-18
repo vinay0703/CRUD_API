@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "0108e7b4-8998-4c67-adfb-da4c2260c5df",
+		"name": "company",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "29015955"
+	},
+	"item": [
+		{
+			"name": "create_company",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Hilti\",\r\n    \"address\":{\r\n        \"city\": \"Nssssssssss2222222222oida\",\r\n        \"country\": \"I222222222222ndia\",\r\n        \"street\": \"BH2222222222222S\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/company"
+			},
+			"response": []
+		},
+		{
+			"name": "get_company_by_id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/company/9"
+			},
+			"response": []
+		},
+		{
+			"name": "get_all_companies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/company"
+			},
+			"response": []
+		},
+		{
+			"name": "update_company",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 8,\r\n    \"name\": \"HTSI\",\r\n    \"address\": {\r\n        \"id\": 12,\r\n        \"city\": \"Hyd\",\r\n        \"country\": \"India\",\r\n        \"street\": \"5085\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/company"
+			},
+			"response": []
+		},
+		{
+			"name": "delete_company",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "localhost:8080/company/8"
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "6c3536da-d748-488b-960c-c443d9c82803",
+		"name": "employee",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "29015955"
+	},
+	"item": [
+		{
+			"name": "get_all_employees",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "companyId",
+						"value": "8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/employee?departmentId=7",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employee"
+					],
+					"query": [
+						{
+							"key": "departmentId",
+							"value": "7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_employee_by_id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "companyId",
+						"value": "8",
+						"type": "text"
+					}
+				],
+				"url": "localhost:8080/employee/5"
+			},
+			"response": []
+		},
+		{
+			"name": "create_employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Aswartha\",\r\n    \"gender\": \"Male\",\r\n    \"address\": {\r\n        \"city\": \"Pune\",\r\n        \"country\": \"India\",\r\n        \"street\": \"BHS\"\r\n    },\r\n    \"department\": {\r\n        \"id\": 7\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/employee"
+			},
+			"response": []
+		},
+		{
+			"name": "update_employee",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 11,\r\n    \"name\": \"Aswartha Araveti\",\r\n    \"gender\": \"Male\",\r\n    \"address\": {\r\n        \"id\": 26,\r\n        \"city\": \"India\",\r\n        \"country\": \"Pune\",\r\n        \"street\": \"BHS\"\r\n    },\r\n    \"department\": {\r\n        \"id\": 7\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/employee"
+			},
+			"response": []
+		},
+		{
+			"name": "delete_employee",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "localhost:8080/employee/5"
+			},
+			"response": []
+		}
+	]
+}

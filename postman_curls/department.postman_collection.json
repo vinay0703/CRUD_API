@@ -1,0 +1,85 @@
+{
+	"info": {
+		"_postman_id": "323e94b0-89d8-474a-9583-946ddde799fc",
+		"name": "department",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "29015955"
+	},
+	"item": [
+		{
+			"name": "create_department",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"BUTS\",\r\n    \"company\": {\r\n        \"id\": 8\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/department"
+			},
+			"response": []
+		},
+		{
+			"name": "get_all_departments",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "companyId",
+						"value": "8",
+						"type": "text"
+					}
+				],
+				"url": "localhost:8080/department"
+			},
+			"response": []
+		},
+		{
+			"name": "delete_department",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "localhost:8080/department/7"
+			},
+			"response": []
+		},
+		{
+			"name": "get_department_by_id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "companyId",
+						"value": "8",
+						"type": "text"
+					}
+				],
+				"url": "localhost:8080/department/7"
+			},
+			"response": []
+		},
+		{
+			"name": "update_department",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 7,\r\n    \"name\": \"BUTS Platform\",\r\n    \"company\": {\r\n        \"id\": 8\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/department"
+			},
+			"response": []
+		}
+	]
+}
